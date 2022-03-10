@@ -4,10 +4,25 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        link(rel="stylesheet", href="/css/styles.css")
+        link(rel="shortcut icon", href ="assets/cam.png")
+        title Films
     body
-        each product in products
-            h1 Sección productos
-            p Título: #{product.title}
-            p Descripción: #{product.description}
-            img(src=product.image, alt=product.title width="100")
+        include ./header.pug
+        section.films__section
+            article.films__a1 
+                p.title #{films.Title}
+                img.films__img(src=`${films.Poster}`, alt="movie.img")
+            article.films__a2
+                p Director: 
+                p.director #{films.Director}
+                p Año:
+                p.year #{films.Year}
+                p Protagonistas: 
+                p.actors #{films.Actors}
+                p Puntuacion: 
+                p.points #{films.imdbRating}
+                p Premios:
+                p.awards #{films.Awards}
+                p Descripción:
+                p.description #{films.Plot}

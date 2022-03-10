@@ -10,6 +10,7 @@ app.use(express.json());
 /*motor de vistas pug*/
 app.set("view engine", "pug");
 app.set("views", "./views");
+const apiKey = process.env.API_KEY;
 
 /*indica la carpeta de los archivos státicos que se vuelca en sources*/
 app.use(express.static("public"));
@@ -18,28 +19,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const fetch = require("node-fetch");
 
 app.get("/films/:title?", async (req, res) => {
-  if (req.params.id) {
+  if (req.params.title) {
     try {
       let response = await fetch(
-        `https://fakestoreapi.com/products/${req.params.id}`
+        `https://www.omdbapi.com/?t=${req.params.title}&apikey=${apiKey}`
       ); //{}
-      let products = await response.json(); //{}
-      res.render("films", { films: [products] }); // Pinta datos en el pug
-    } catch (error) {
-      console.log(`ERROR: ${error.stack}`);
-    }
-  } else {
-    try {
-      let response = await fetch(`https://fakestoreapi.com/products`); // []
-      let products = await response.json(); // []
-      res.render("films", { products }); // Pinta datos en el pug
+      let title = await response.json(); //{}
+      res.render("films", { films: title }); // Pinta datos en el pug
     } catch (error) {
       console.log(`ERROR: ${error.stack}`);
     }
   }
 });
+app.post("/", function (req, res) {
+  let film = req.body.films;
+  console.log(film);
 
-/*MODULOS EXTERNOS*/
+  res.redirect(`http://localhost:3000/films/${film}`);
+});
+
 app.get("/", (req, res) => {
   res.render("home.pug");
 });
