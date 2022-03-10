@@ -1,0 +1,112 @@
+body {
+  background-color: #0d27501f;
+}
+#footer,
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 7px 7px 10px #0d27501f, -5px -5px 7px #ffffff,
+    inset -5px -5px 10px #ffffff9f, inset 5px 5px 15px #0d27501f;
+  border-radius: 10px;
+  margin: 15px 5px;
+}
+
+.home__section {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  box-shadow: 7px 7px 10px #0d27501f, -5px -5px 7px #ffffff,
+    inset -5px -5px 10px #ffffff9f, inset 5px 5px 15px #0d27501f;
+  border-radius: 10px;
+  margin: 15px 5px;
+}
+.header__nav {
+  list-style: none;
+  display: flex;
+  padding: 0px;
+  margin: 5px;
+  text-shadow: 0px 0px 2 + px #00ccff;
+}
+.header__buttom {
+  cursor: pointer;
+  width: 100px;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px 10px;
+  box-shadow: 5px 5px 10px #0d27501f, -3px -3px 7px #ffffff;
+}
+.header__buttom:hover {
+  background-color: #00ccff23;
+  box-shadow: 5px 5px 10px #0d27501f, -3px -3px 7px #ffffff,
+    inset -5px -5px 10px #ffffff9f, inset 5px 5px 15px #0d27501f;
+}
+a {
+  text-decoration: none;
+  color: rgb(19, 84, 110);
+  font-family: oswald;
+  font-size: 15px;
+}
+.home__form__content {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-color: transparent;
+  width: 300px;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 15px 15px;
+  box-shadow: 5px 5px 10px #0d27501f, -3px -3px 7px #ffffff;
+}
+.home__datas__content {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-color: transparent;
+  width: 300px;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 15px 15px;
+  box-shadow: 5px 5px 10px #0d27501f, -3px -3px 7px #ffffff;
+}
+.home__form {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+.home__input {
+  padding: 5px;
+  border: transparent;
+  text-align: center;
+  box-shadow: 7px 7px 10px #0d27501f, -5px -5px 7px #ffffff,
+    inset -5px -5px 10px #ffffff9f, inset 5px 5px 15px #0d27501f;
+  border-radius: 10px;
+  margin: 15px 5px;
+}
+.home__button {
+  text-decoration: none;
+  color: rgb(19, 84, 110);
+  font-family: oswald;
+  font-size: 15px;
+  width: 150px;
+  padding: 5px;
+  border: transparent;
+  text-align: center;
+  box-shadow: 7px 7px 10px #0d27501f, -5px -5px 7px #ffffff;
+  border-radius: 10px;
+  margin: 15px 5px;
+}
+.home__button:hover {
+  background-color: #00ccff23;
+  box-shadow: 5px 5px 10px #0d27501f, -3px -3px 7px #ffffff,
+    inset -5px -5px 10px #ffffff9f, inset 5px 5px 15px #0d27501f;
+}
+.home__img {
+  width: 200px;
+  margin-bottom: 20px;
+}

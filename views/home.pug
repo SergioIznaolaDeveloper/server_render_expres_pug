@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="/css/styles.css")
+    body
+        include ./header.pug
+        section.home__section
+
+            fieldset.home__form__content
+                img.home__img(src="assets/cam.png", alt="asasasas")
+                form.home__form(action='/' method='post')
+                    input.home__input(name='films' type='text' placeholder='Movie name' required='')
+                    input.home__button(type='submit' value='Get movie')
+
+        script(href ="public/js/script.js") 
+        
+        include ./footer.pug
